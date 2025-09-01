@@ -1,0 +1,427 @@
+/* NB - This statement:
+1. Declares the character encoding for the document as UTF-8. */
+@charset "utf-8";
+
+/* HTML and Body Styles */
+
+/* NB - This statement:
+1. Applies a background "jb_back1.png" image to the entire HTML page, 
+   centered and covering the viewport.
+2. Fixes the background image position during scrolling.
+3. Sets the font family to Verdana, Geneva, sans-serif.
+4. Sets the base font size to 12px. */
+html {
+   background: url(../Img/jb_back1.png) center / cover fixed;
+   font-family: Verdana, Geneva, sans-serif;
+   font-size: 12px;
+}
+
+/* NB - This statement:
+1. Sets the body background color to rgb(236, 236, 236).
+2. Limits the body width to a maximum of 1200px.
+3. Centers the body horizontally using auto margins.
+4. Adds box shadow effects to both sides of the body.
+5. Sets the display to flex with row wrap direction. */
+body {
+   background: rgb(236, 236, 236);
+   max-width: 1200px;
+   margin: 0px auto;
+   box-shadow: rgb(51, 51, 51) 10px 10px 25px,  rgb(51, 51, 51) -10px 10px 25px;
+   display: flex;
+   flex-flow: row wrap;
+}
+
+/* NB - This statement:
+1. Applies a background image "jb_back3.png", to the header, centered, 
+   covering the header area, no repeat.
+2. Sets the header width to 100%. */
+body > header {
+   background: url(../Img/jb_back3.png) center / cover no-repeat;
+   width: 100%;
+}
+
+/* NB - This statement:
+1. Makes the logo image display as a block element.
+2. Sets the image alignment to the left.
+3. Sets the image width to 40% with a maximum width of 300px.
+4. Adds a border radius of 20px for rounded corners.
+5. Adds a 5px solid border with color rgba(84,183,213,1.00).
+6. Adds a margin of 20px auto to center the image horizontally.
+7. Adds a box shadow to the image. */
+img#logoImage {
+   display: block;
+   float: left;
+   width: 40%;
+   max-width: 300px;
+   border-radius: 20px;
+   border: 5px solid rgba(84,183,213,1.00);
+   margin: 20px auto;
+   box-shadow: rgb(51, 51, 51) 10px 10px 20px;
+}
+
+/* Navicon Styles */
+
+/* NB - This statement:
+1. Floats the navicon link to the right. */
+a#navicon {
+   float: right;
+}
+
+/* NB - This statement:
+1. Makes the navigation menu display as block when hovering over 
+   the navicon or the navigation list. */
+a#navicon:hover+ul, 
+nav.horizontal ul:hover {
+   display: block;
+}
+
+/* Top Navigation Styles */
+
+/* NB - This statement:
+1. Sets the top navigation background color to rgb(27, 117, 188).
+2. Sets the width of the navigation bar to 100%.
+3. Adds a box shadow at the bottom of the navigation bar. */
+nav#top {
+   background-color: rgb(27, 117, 188);
+   width: 100%;
+   box-shadow: rgb(51, 51, 51) 0px -10px 20px;
+}
+
+/* NB - This statement:
+1. Creates an empty element after the top navigation.
+2. Sets the display to table to help clear floats.
+3. Clears floats from previous elements. */
+nav#top::after {
+   content: "";
+   display: table;
+   clear: both;
+}
+
+/* NB - This statement:
+1. Hides the top navigation list by default.
+2. Sets the width of the list to 100%.
+3. Adds padding at the bottom of the list. */
+nav#top ul {
+   display: none;
+   width: 100%;
+   padding-bottom: 10px;
+}
+
+/* NB - This statement:
+1. Sets the background color of each navigation list item.
+2. Sets the line height to 2em.
+3. Sets the font size to 1.5em.
+4. Sets the width of each list item to 100%. */
+nav#top ul li {
+   background-color: rgb(27, 117, 188);
+   line-height: 2em;
+   font-size: 1.5em;
+   width: 100%;
+}
+
+/* NB - This statement:
+1. Sets the color of navigation links to white.
+2. Displays each link as a block element.
+3. Sets the link width to 100%.
+4. Adds a left margin of 20px. */
+nav#top ul li a {
+   color: white;
+   display: block;
+   width: 100%;
+   margin-left: 20px;
+}
+
+/* Flex Sizes and Order */
+
+/* NB - This statement:
+1. Sets the flex properties and order of the left aside element. */
+aside#left {
+   flex: 1 5 200px;
+   order: 50;
+}
+
+/* NB - This statement:
+1. Sets the flex properties of the article element. */
+article {
+   flex: 5 1 281px;
+}
+
+/* NB - This statement:
+1. Sets the flex properties of the right aside element. */
+aside#right {
+   flex: 2 2 200px;
+}
+
+/* NB - This statement:
+1. Sets the display order of the bottom navigation to 75. */
+nav#bottom {
+   order: 75;
+}
+
+/* NB - This statement:
+1. Sets the display order of the footer to 100. */
+body > footer {
+   order: 100;
+}
+
+/* Left Aside Styles */
+
+/* NB - This statement:
+1. Sets the background color of the left aside element to rgb(186, 215, 236). */
+aside#left {
+   background-color: rgb(186, 215, 236);
+}
+
+/* NB - This statement:
+1. Centers the text in h1 elements inside the left aside.
+2. Sets the font size to 2em.
+3. Adds letter spacing of 0.1em.
+4. Sets the line height to 1.4em.
+5. Adds vertical margins of 10px and centers the element horizontally. */
+aside#left h1 {
+   text-align: center;
+   font-size: 2em;
+   letter-spacing: 0.1em;
+   line-height: 1.4em;
+   margin: 10px auto;
+}
+
+/* NB - This statement:
+1. Centers the text in paragraph elements inside the left aside.
+2. Sets the font size to 1.2em.
+3. Sets the line height to 1.4em.
+4. Adds vertical margins of 10px and centers the element horizontally. */
+aside#left p {
+   text-align: center;
+   font-size: 1.2em;
+   line-height: 1.4em;
+   margin: 10px auto;
+}
+
+/* Right Aside Styles */
+
+/* NB - This statement:
+1. Sets the background color of the right aside element to rgb(108, 169, 69). */
+aside#right {
+   background-color: rgb(108, 169, 69);
+}
+
+/* NB - This statement:
+1. Sets the font size of h1 elements inside the right aside to 2em.
+2. Adds vertical margins of 10px and centers the text.
+3. Adds letter spacing of 0.2em.
+4. Sets the line height to 1.4em. */
+aside#right h1 {
+   font-size: 2em;
+   margin: 10px 0px;
+   text-align: center;
+   letter-spacing: 0.2em;
+   line-height: 1.4em;
+}
+
+/* NB - This statement:
+1. Displays definition lists as flex containers.
+2. Arranges the items in a vertical column without wrapping.
+3. Centers the items horizontally and vertically. */
+dl {
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: center;
+   justify-content: center;
+}
+
+/* NB - This statement:
+1. Sets the width of dt and dd elements to 70%.
+2. Adds 5px margin around each element.
+3. Centers the text in each element. */
+dt, dd {
+   width: 70%;
+   margin: 5px;
+   text-align: center;
+}
+
+/* NB - This statement:
+1. Adds a 1px solid black top border to dt elements.
+2. Makes dt text bold.
+3. Adds 5px top padding to dt elements. */
+dt {
+   border-top: 1px solid black;
+   font-weight: bold;
+   padding-top: 5px;
+}
+
+/* Article Styles */
+
+/* NB - This statement:
+1. Makes all images inside articles display as block elements.
+2. Sets the width of these images to 100%. */
+article img {
+   display: block;
+   width: 100%;
+}
+
+/* NB - This statement:
+1. Adds a 20px margin around all paragraph elements inside articles. */
+article p {
+   margin: 20px;
+}
+
+/* Bottom Navigation Styles */
+
+/* NB - This statement:
+1. Sets the background color of the bottom navigation to rgb(27, 117, 188).
+2. Sets the width of the bottom navigation to 100%.
+3. Displays the navigation as a flex container.
+4. Arranges the flex items in a single row without wrapping.
+5. Centers the items horizontally.
+6. Adds 10px padding at the bottom. */
+nav#bottom {
+   background-color: rgb(27, 117, 188);
+   width: 100%;
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: center;
+   padding-bottom: 10px;
+}
+
+/* NB - This statement:
+1. Sets the font size of h1 elements inside the bottom navigation to 1.5em.
+2. Adds vertical margins of 15px. */
+nav#bottom h1 {
+   font-size: 1.5em;
+   margin: 15px 0px;
+}
+
+/* NB - This statement:
+1. Sets the width of unordered lists inside the bottom navigation to 30%.
+2. Limits the maximum width of these lists to 200px. */
+nav#bottom ul {
+   width: 30%;
+   max-width: 200px;
+}
+
+/* NB - This statement:
+1. Sets the font size of list items inside the bottom navigation to 1.2em.
+2. Sets the line height of these list items to 1.8em. */
+nav#bottom ul li {
+   font-size: 1.2em;
+   line-height: 1.8em;
+}
+
+/* NB - This statement:
+1. Sets the color of links inside list items in the bottom navigation to white. */
+nav#bottom ul li a {
+   color: white;
+}
+
+/* Footer Styles */
+
+/* NB - This statement:
+1. Sets the width of the footer to 100%.
+2. Centers the text inside the footer.
+3. Sets the footer background color to rgb(51, 51, 51).
+4. Sets the text color to white.
+5. Adds 10px vertical padding inside the footer. */
+body > footer {
+   width: 100%;
+   text-align: center;
+   background-color: rgb(51, 51, 51);
+   color: white;
+   padding: 10px 0px;
+}
+
+/* NB - This statement:
+1. Applies styles only when the screen width is 480px or less. */
+@media only screen and (max-width: 480px) {
+
+   /* NB - This statement:
+   1. Hides the right aside element when the screen width is 480px or less. */
+   aside#right {
+      display: none;
+   }
+   
+   /* NB - This statement:
+   1. Sets the font size of paragraph text inside articles to 1.2em when the screen width is 480px or less.
+   2. Sets the line height of this text to 1.4em. */
+   article p {
+      font-size: 1.2em;
+      line-height: 1.4em;
+   }
+   
+   /* Telephone and Email Styles */
+     
+   /* NB - This statement:
+   1. Makes links inside paragraphs in the left aside display as block elements.
+   2. Sets the width of these links to 220px.
+   3. Centers these links horizontally using auto margins.
+   4. Sets the background color to rgb(27, 117, 188).
+   5. Adds a border radius of 20px to make the links rounded.
+   6. Sets the text color to white.
+   7. Adds 10px internal padding.
+   8. Sets the font size to 1.2em.
+   9. Removes the underline from the links. */
+   aside#left p a {
+      display: block;
+      width: 220px;
+      margin: 0px auto;
+      background-color: rgb(27, 117, 188);
+      border-radius: 20px;
+      color: white;
+      padding: 10px;
+      font-size: 1.2em;
+      text-decoration: none;
+   }
+}
+
+
+/* ============================================
+    Tablet and Desktop Devices: 481px or more 
+   ============================================*/
+
+* NB - This statement:
+1. Applies styles only when the screen width is 481px or more. */
+@media only screen and (min-width: 481px) {
+
+   /* NB - This statement:
+   1. Hides the navicon link when the screen width is 481px or more. */
+   a#navicon {
+      display: none;
+   }
+   
+   /* NB - This statement:
+   1. Displays the top navigation list as a flex container.
+   2. Arranges the flex items in a single row without wrapping.
+   3. Centers the items horizontally.
+   4. Sets the list to be positioned relative to its container. */
+   nav#top ul {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      position: relative;
+   }
+   
+   /* NB - This statement:
+   1. Sets the width of list items in the top navigation to 100px. */
+   nav#top ul li {
+      width: 100px;
+   }
+   
+   /* NB - This statement:
+   1. Sets the font size of paragraph text inside articles to 1.2em when the screen width is 481px or more.
+   2. Sets the line height of this text to 1.5em. */
+   article p {
+      font-size: 1.2em;
+      line-height: 1.5em;
+   }
+}
+
+/* NB - This statement:
+1. Applies styles only when the screen width is 681px or more. */
+@media only screen and (min-width: 681px) {
+
+   /* NB - This statement:
+   1. Resets the order of the left aside element to its default order when the screen width is 681px or more. */
+   aside#left {
+      order: initial;
+   }
+}
